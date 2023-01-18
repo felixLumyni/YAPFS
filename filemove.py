@@ -1,5 +1,5 @@
 '''
-# filemove v2.6 by Lumyni
+# filemove v2.7 by Lumyni
 # Requires https://www.python.org/
 # Messes w/ files, only edit this if you know what you're doing!
 '''
@@ -8,6 +8,7 @@ import os, importlib, sys, locale, ctypes, shutil, pathlib, fnmatch
 from datetime import datetime
 from tkinter import messagebox
 from tkinter import filedialog
+from importlib import util
 
 def import_required_modules(modules):
     for (module,link,targetversion) in modules:
@@ -50,7 +51,7 @@ def import_required_modules(modules):
 
 def import_path(path):
     module_name = os.path.basename(path).replace('-', '_')
-    spec = importlib.util.spec_from_loader(
+    spec = util.spec_from_loader(
         module_name,
         importlib.machinery.SourceFileLoader(module_name, path)
     )
@@ -410,7 +411,7 @@ class UX:
                 MSG2 = "To avoid conflicts, the file in question was renamed to "+warn['newfilename']+"."
                 MSG3 = "Check the console for details."
                 self.w1 = messagebox.showwarning(title='Warning', message=f"{MSG1}\n{MSG2}\n{MSG3}")
-                warn = False
+                warn = {}
                 root.focus_force()
             if warn['type'] == 2:
                 root.destroy()
