@@ -1,5 +1,5 @@
 '''
-# filemove v2.7 by Lumyni
+# filemove v2.71 by Lumyni
 # Requires https://www.python.org/
 # Messes w/ files, only edit this if you know what you're doing!
 '''
@@ -90,7 +90,7 @@ def post_run(canreplace, successcount, failcount):
             print(f"A total of {failcount} files were moved, but replaced something in the process.")
             messagebox.showwarning(title='Warning', message="At least one file was replaced in the process.\nCheck the console for details.")
 
-def run(onlysave=False, source='', autosave=None, canreplace=None, appearancemode=0, destination=[], pattern=[]):
+def run(onlysave=False, source='', autosave=None, canreplace=None, appearancemode=0, language='auto', destination=[], pattern=[]):
     variables = vars()
     if onlysave:
         settings_save(variables, onlysave)
