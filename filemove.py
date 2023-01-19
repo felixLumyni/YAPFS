@@ -1,5 +1,5 @@
 '''
-# filemove v2.71 by Lumyni
+# filemove v2.72 by Lumyni
 # Requires https://www.python.org/
 # Messes w/ files, only edit this if you know what you're doing!
 '''
@@ -384,12 +384,12 @@ class UX:
             lang = lang.replace('-','')
             lang = lang.replace(' ','')
             if lang == "PTBR" or lang == "PT" or lang == "BR":
-                self.inf1.configure(text="N\u00E3o use documentos que precisam de admin")
-                self.lbl1.configure(text="Documento original")
-                self.lbl2.configure(text="Padr\u00F5es")
-                self.lbl3.configure(text="Destinos")
+                self.inf1.configure(text="N\u00E3o use diret\u00F3rios que precisam de admin")
+                self.lbl1.configure(text="Diret\u00F3rio fonte")
+                self.lbl2.configure(text="Destinos")
+                self.lbl3.configure(text="Padr\u00F5es")
                 self.b1.configure(text="Salvar configura\u00E7\u00F5es")
-                self.b2.configure(text="Gerar documento")
+                self.b2.configure(text="Organizar diret\u00F3rio")
                 self.cfg1.configure(text="Salvar depois de organizar")
                 self.cfg2.configure(text="Permitir substituir arquivos")
                 self.slbl1.configure(text="Preset atual: "+os.path.basename(preset))
