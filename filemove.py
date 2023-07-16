@@ -1,5 +1,5 @@
 '''
-# filemove v2.72 by Lumyni
+# filemove v2.73 by Lumyni
 # Requires https://www.python.org/
 # Messes w/ files, only edit this if you know what you're doing!
 '''
@@ -9,6 +9,8 @@ from datetime import datetime
 from tkinter import messagebox
 from tkinter import filedialog
 from importlib import util
+from importlib import util
+from importlib import machinery
 
 def import_required_modules(modules):
     for (module,link,targetversion) in modules:
@@ -464,7 +466,7 @@ def main(settingsfile=None):
 if __name__ == "__main__":
     required_modules = [
         #(NAME, LINK, TARGET_VERSION),
-        ('customtkinter', ': https://github.com/TomSchimansky/CustomTkinter/tags', '503')
+        ('customtkinter', ': https://github.com/TomSchimansky/CustomTkinter/tags', '513')
     ]
     import_required_modules(required_modules)
     sys.dont_write_bytecode = True
